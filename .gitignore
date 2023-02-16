@@ -1,0 +1,9 @@
+node_modules
+kindleunpack.spec
+build
+output
+*.mobi
+*.prc
+*.azw
+*.azw3
+*.azw4

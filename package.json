@@ -1,0 +1,44 @@
+{
+  "name": "kindleunpack",
+  "version": "1.0.0",
+  "description": "Simple Node.js wrapper of KindleUnpack to unpack Amazon / Kindlegen generated ebooks.",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "types": "./index.d.ts",
+  "main": "./index.js",
+  "bin": "./cli.js",
+  "keywords": [
+    "mobi",
+    "prc",
+    "azw",
+    "azw3",
+    "azw4",
+    "kindle",
+    "ebook",
+    "extract",
+    "export",
+    "image",
+    "cli"
+  ],
+  "author": "ssnangua",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ssnangua/node-kindleunpack"
+  },
+  "files": [
+    "index.js",
+    "index.d.ts",
+    "dist",
+    "lib",
+    "README.md",
+    "LICENSE"
+  ],
+  "devDependencies": {
+    "@types/node": "^18.13.0"
+  }
+}
