@@ -8,7 +8,7 @@ const args = process.argv.slice(2);
 const cmd =
   process.platform === "win32"
     ? `"${path.join(__dirname, "dist/kindleunpack.exe")}"`
-    : `py ${path.join(__dirname, "lib/kindleunpack.py")}`;
+    : `py "${path.join(__dirname, "lib/kindleunpack.py")}"`;
 
 const help = `Usage: kindleunpack [-r -s -d -h -i] [-p APNX_FILE] ebookFile outputDir
 

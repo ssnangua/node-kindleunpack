@@ -5,7 +5,7 @@ const path = require("path");
 const cmd =
   process.platform === "win32"
     ? `"${path.join(__dirname, "dist/kindleunpack.exe")}"`
-    : `py ${path.join(__dirname, "lib/kindleunpack.py")}`;
+    : `py "${path.join(__dirname, "lib/kindleunpack.py")}"`;
 
 function unpack(ebookFile, outputDir = ".", options = "") {
   if (typeof options === "object" && options) {
