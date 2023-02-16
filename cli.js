@@ -29,13 +29,13 @@ Options:
 
 if (args.includes("-h") || args.includes("--help")) {
   console.log(help);
+} else {
+  exec(`${cmd} ${args.join(" ")}`)
+    .then(({ stdout, stderr }) => {
+      if (stderr) console.error(stderr);
+      else console.log(stdout);
+    })
+    .catch((err) => {
+      console.error(err);
+    });
 }
-
-exec(`${cmd} ${args.join(" ")}`)
-  .then(({ stdout, stderr }) => {
-    if (stderr) console.error(stderr);
-    else console.log(stdout);
-  })
-  .catch((err) => {
-    console.error(err);
-  });
