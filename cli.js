@@ -16,7 +16,7 @@ Unpack Amazon / Kindlegen generated ebooks.
 
 Arguments:
   ebookFile       path to ebook file
-  outputDir       output directory (default: ".")
+  outputDir       output directory
 
 Options:
   -h, --help      display help for command

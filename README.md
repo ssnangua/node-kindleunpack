@@ -54,7 +54,7 @@ kindleunpack [-r -s -d -h -i] [-p APNX_FILE] ebookFile outputDir
 ### Arguments
 
 - `ebookFile` - path to the desired Kindle/MobiPocket ebook
-- `outputDir` - output directory (default: ".")
+- `outputDir` - output directory
 
 ### Options
 
