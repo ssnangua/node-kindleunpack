@@ -7,32 +7,32 @@ export declare interface UnpackOptions {
   /**
    * use HDImages to overwrite lower resolution versions, if present
    */
-  use_hd: boolean;
-  i: boolean;
+  use_hd?: boolean;
+  i?: boolean;
   /**
    * split combination mobis into older mobi and mobi KF8 ebooks
    */
-  split_combos: boolean;
-  s: boolean;
+  split_combos?: boolean;
+  s?: boolean;
   /**
    * path to a `.apnx` file that contains real page numbers associated with an azw3 ebook
    */
-  apnx_file: string;
-  p: string;
+  apnx_file?: string;
+  p?: string;
   /**
    * specify EPUB version to unpack to: `2`, `3` or `A` (for automatic) or `F` for Force to EPUB2, default is `2`
    */
-  epub_version: 2 | 3 | "2" | "3" | "A" | "F";
+  epub_version?: 2 | 3 | "2" | "3" | "A" | "F";
   /**
    * write raw data to the output folder
    */
-  write_raw: boolean;
-  r: boolean;
+  write_raw?: boolean;
+  r?: boolean;
   /**
    * dump headers and other debug info to output and extra files
    */
-  dump: boolean;
-  d: boolean;
+  dump?: boolean;
+  d?: boolean;
 }
 
 /**
@@ -43,6 +43,6 @@ export declare interface UnpackOptions {
  */
 export declare function unpack(
   ebookFile: string,
-  outputDir: string,
-  options: UnpackOptions | string
+  outputDir?: string,
+  options?: UnpackOptions | string
 ): PromiseWithChild<{ stdout: string; stderr: string }>;

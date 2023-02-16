@@ -31,17 +31,19 @@ unpack("test.azw3", "output/ebook2", {
 });
 ```
 
-### unpack(ebookFile, outputDir, options)
+### unpack(ebookFile[, outputDir][, options]): Promise
 
 - `ebookFile` string - path to the desired Kindle/MobiPocket ebook
-- `outputDir` string - output directory (default: ".")
-- `options`
-  - `use_hd` boolean - use HDImages to overwrite lower resolution versions, if present
-  - `split_combos` boolean - split combination mobis into older mobi and mobi KF8 ebooks
-  - `apnx_file` string - path to a `.apnx` file that contains real page numbers associated with an azw3 ebook
-  - `epub_version` `2`|`3`|`A`|`F` - pecify EPUB version to unpack to: `2`, `3` or `A` (for automatic) or `F` for Force to EPUB2, default is `2`
-  - `write_raw` boolean - write raw data to the output folder
-  - `dump` boolean - dump headers and other debug info to output and extra files
+- `outputDir` string (optional) - output directory (default: ".")
+- `options` object (optional)
+  - `use_hd` boolean (optional) - use HDImages to overwrite lower resolution versions, if present
+  - `split_combos` boolean (optional) - split combination mobis into older mobi and mobi KF8 ebooks
+  - `apnx_file` string (optional) - path to a `.apnx` file that contains real page numbers associated with an azw3 ebook
+  - `epub_version` `2`|`3`|`A`|`F` (optional) - pecify EPUB version to unpack to: `2`, `3` or `A` (for automatic) or `F` for Force to EPUB2, default is `2`
+  - `write_raw` boolean (optional) - write raw data to the output folder
+  - `dump` boolean (optional) - dump headers and other debug info to output and extra files
+
+Returns `Promise<{ stdout: string; stderr: string }>`
 
 ## CLI
 
