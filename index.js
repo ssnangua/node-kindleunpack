@@ -16,7 +16,7 @@ function unpack(ebookFile, outputDir = ".", options = "") {
     if (options.d || options.dump) o.push("-d");
     if (options.i || options.use_hd) o.push("-i");
     if ([2, 3, "2", "3", "A", "F"].includes(options.epub_version))
-      o.push(`--epub_version ${options.epub_version}`);
+      o.push(`--epub_version=${options.epub_version}`);
     if (typeof p === "string" && p.trim().length > 0) o.push(`-p "${p}"`);
     options = o.join(" ");
   }

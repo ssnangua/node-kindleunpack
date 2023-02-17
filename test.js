@@ -8,4 +8,6 @@ unpack("test2.azw3", "output/ebook2", {
   dump: false,
   epub_version: "2",
   apnx_file: "",
+}).then(({ stdout }) => {
+  console.log(stdout);
 });
